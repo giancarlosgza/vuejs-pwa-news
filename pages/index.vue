@@ -1,72 +1,81 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        vuejs-pwa-news
-      </h1>
-      <h2 class="subtitle">
-        Vuejs news app
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="container mt-5">
+
+    <!-- TOP ARTICLES -->
+    <div class="row">
+      <div class="col-md-8">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <h6 class="font-weight-bold">Headlines</h6>
+          </div>
+          <!-- MAIN FEED -->
+          <div class="col-md-12" v-for="(article, index) in articles.slice(0,1)" :key="index">
+            <a :href="article.url" target="_blank" >
+              <div class="card card-outline mb-3 translate-up">
+                <div class="card-body">
+                  <h6 class="overline text-primary">US - {{ article.source.name }}</h6>
+                  <h6 class="body-1">{{ article.title }}</h6>
+                  <h6 class="body-2 text-muted">{{ article.description }}</h6>
+                  <img :src="article.urlToImage" class="img-fluid mt-3" :alt="article.title" :title="article.title">
+                </div>
+              </div>
+            </a>
+          </div>
+          <!-- SUB MAIN FEED -->
+          <div class="col-md-12" v-for="(article, index) in articles.slice(1,5)" :key="index">
+            <a :href="article.url" target="_blank" >
+              <div class="card card-outline mb-3 translate-up">
+                <div class="card-body">
+                  <div class="media">
+                    <div class="media-body">
+                      <h6 class="overline text-primary">US - {{ article.source.name }}</h6>
+                      <h6 class="body-1">{{ article.title }}</h6>
+                      <h6 class="body-2 text-muted">{{ article.description }}</h6>
+                    </div>
+                    <img :src="article.urlToImage" class="ml-3 align-self-center border-radius-8" style="width:128px" alt="...">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
+      <!-- RIGHT FEED -->
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12 mb-2">
+            <h6>Latest updates</h6>
+          </div>
+          <div class="col-md-12" v-for="(article, index) in articles.slice(6,9)" :key="index">
+            <a :href="article.url" target="_blank" >
+              <div class="card card-outline mb-3 translate-up">
+                <img :src="article.urlToImage" class="card-img-top" :alt="article.title" :title="article.title">
+                <div class="card-body">
+                  <h6 class="overline text-primary">US - {{ article.source.name }}</h6>
+                  <h6 class="body-1">{{ article.title }}</h6>
+                  <h6 class="body-2 text-muted">{{ article.description }}</h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
     </div>
+    
+    
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
-  components: {
-    Logo
+  async asyncData({ app }) {
+    const { articles } = await app.$axios.$get(
+      `https://newsapi.org/v2/top-headlines?country=us&apiKey=64a37730f655437180f20e1a273e4eee`
+    );
+
+    return { articles }; 
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
