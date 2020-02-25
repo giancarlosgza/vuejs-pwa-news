@@ -6,7 +6,7 @@
       <div class="col-md-8">
         <div class="row">
           <div class="col-md-12 mb-2">
-            <h6 class="font-weight-bold">Headlines</h6>
+            <h6 class="font-weight-bold">Headlines</h6> 
           </div>
           <!-- MAIN FEED -->
           <div class="col-md-12" v-for="(article, index) in articles.slice(0,1)" :key="index">

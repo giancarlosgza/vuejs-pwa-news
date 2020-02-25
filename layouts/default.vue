@@ -1,6 +1,6 @@
 <template>
   <div>
-      <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-light bg-light sticky-top">
         <a class="navbar-brand" href="#">PWA News</a>
       </nav>
     <nuxt />
