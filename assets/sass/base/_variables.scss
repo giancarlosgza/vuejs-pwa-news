@@ -1,4 +1,12 @@
-// Theme
+// Theme light 
+:root {
+    --theme-primary-color: #ffffff;
+}
+
+[theme="dark"] { 
+    --theme-primary-color: #1e1e1e;
+}
+
 $theme-background: #fdfdfd;
 $theme-on-primary: #000000;
 $theme-on-primary-inverse: #ffffff;
@@ -9,7 +17,7 @@ $theme-surface-1dp: #ffffff;
 $theme-surface-card-outline: #dadce0;
 $theme-on-surface: #757575;
 
-//  Basic colors
+//  Basic colors 
 $black: #000;
 $white: #fff;
 

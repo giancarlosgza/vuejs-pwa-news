@@ -4,7 +4,7 @@
     CARD
 ----------------------------------------------------- */
 .card {
-  background-color: $theme-surface-1dp;
+  background-color: var(--theme-primary-color);
   color: $theme-on-primary;
   border-radius: $border-radius-8;
   /* 1dp */
