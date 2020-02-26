@@ -4,7 +4,7 @@
     NAVBAR
 ----------------------------------------------------- */
 .navbar {
-  background-color: $theme-surface !important;
+  background-color: var(--theme-surface) !important;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 14px;
@@ -14,35 +14,39 @@
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: $theme-primary;
+  color: var(--theme-primary);
   font-family: $font-poppins;
 }
 
 .navbar .navbar-brand {
-  color: $theme-primary;
+  color: var(--theme-primary);
   font-family: $font-poppins;
   font-weight: bold;
 
   &:hover {
-    color: $theme-primary-hover;
+    color: var(--theme-primary-hover);
   }
 
   &:focus,
   &:active {
-    color: $theme-primary-active;
+    color: var(--theme-primary-active);
   }
 }
 
 .navbar a {
-  color: $theme-on-primary;
+  color: var(--theme-on-primary);
 
   &:hover {
-    background-color: #bebebe1c;
+    // background-color: #bebebe1c;
     border-radius: $border-radius-8;
   }
 
   &:focus,
   &:active {
-    color: $theme-primary !important;
+    color: var(--theme-primary) !important;
   }
+}
+
+.footer h6 {
+  color: var(--theme-on-primary-inverse);
 }

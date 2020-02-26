@@ -18,7 +18,7 @@ h5,
 h6,
 p,
 a {
-  color: $black;
+  color: var(--theme-on-primary);
 }
 
 h1 {
@@ -137,6 +137,10 @@ a:focus {
   line-height: 10px;
 }
 
+label {
+  color: var(--theme-on-primary);
+}
+
 // TEXT VARIANTS AND COLORS
 .text-roboto {
   font-family: $font-roboto;
@@ -147,21 +151,21 @@ a:focus {
 }
 
 .text-primary {
-  color: $theme-primary !important;
+  color: var(--theme-primary) !important;
 }
 
 .text-secondary {
-  color: $theme-secondary !important;
+  color: var(--theme-secondary) !important;
 }
 
 .text-success {
-  color: $theme-success !important;
+  color: var(--theme-success) !important;
 }
 
 .text-warning {
-  color: $theme-warning !important;
+  color: var(--theme-warning) !important;
 }
 
 .text-danger {
-  color: $theme-danger !important;
+  color: var(--theme-danger) !important;
 }

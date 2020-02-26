@@ -10,7 +10,7 @@ html {
 body {
     font-family: $font-roboto;
     color: $black;
-    background-color: $white;
+    background-color: var(--theme-background);
     font-weight: 400;
     font-size: 14px;
 }
@@ -19,13 +19,13 @@ body {
     COLORS
 ----------------------------------------------------- */
 .bg-primary {
-    background-color: $theme-primary !important;
-    color: $theme-on-primary-inverse !important;
+    background-color: var(--theme-primary) !important;
+    color: var(--theme-on-primary-inverse) !important;
 }
 
 .bg-secondary {
-    background-color: $theme-secondary !important;
-    color: $theme-on-primary !important;
+    background-color: var(--theme-secondary) !important;
+    color: var(--theme-on-primary) !important;
 }
 
 /* ---------------------------------------------------

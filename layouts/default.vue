@@ -3,7 +3,11 @@
       <nav class="navbar navbar-light bg-light sticky-top">
         <div class="container">
           <a class="navbar-brand" href="#">Newlix</a>
-          <input type="checkbox" class='theme-switch' v-model="darkMode"/>
+          <!-- <input type="checkbox" class='theme-switch'/> -->
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="checkDarkMode" v-model="darkMode">
+            <label class="custom-control-label" for="checkDarkMode">Dark Mode</label>
+          </div>
         </div>
       </nav>
       <nuxt />
@@ -11,7 +15,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12 text-center">
-              <h6 class="subtitle-2 text-white">Powered by NewsApi.org</h6>
+              <h6 class="subtitle-2">Powered by NewsApi.org</h6>
             </div>
         </div>
         </div>
@@ -32,12 +36,6 @@
             }
         },
         mounted() {
-            // set page title
-            document.title = 'Multiple Themes in Vue.js';
-
-            // set 'app-background' class to body tag
-            let bodyElement = document.body;
-            bodyElement.classList.add("app-background");
 
             // check for active theme
             let htmlElement = document.documentElement;

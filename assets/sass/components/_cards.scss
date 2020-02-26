@@ -4,8 +4,8 @@
     CARD
 ----------------------------------------------------- */
 .card {
-  background-color: var(--theme-primary-color);
-  color: $theme-on-primary;
+  background-color: var(--theme-surface-1dp);
+  color: var(--theme-on-primary);
   border-radius: $border-radius-8;
   /* 1dp */
   box-shadow: $shadow-1dp;
@@ -19,7 +19,7 @@
 }
 
 .card-header {
-  background-color: $theme-surface-1dp;
+  background-color: var(--theme-surface-1dp);
   border-bottom: 1px solid transparent;
 }
 
@@ -30,7 +30,7 @@
 
 .card-footer {
   padding: .75rem 1.25rem;
-  background-color: $theme-surface-1dp;
+  background-color: var(--theme-surface-1dp);
   border-top: 1px solid rgba(0, 0, 0, .125);
 }
 
@@ -55,7 +55,7 @@
 
 .card-outline {
   box-shadow: none !important;
-  border: 1px solid $theme-surface-card-outline;
+  border: 1px solid var(--theme-surface-card-outline);
 
   &:hover {
     box-shadow: none;

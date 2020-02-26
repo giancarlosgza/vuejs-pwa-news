@@ -11,8 +11,8 @@
   font-size: map-get($mdc-typography-styles-button, font-size);
   letter-spacing: map-get($mdc-typography-styles-button, letter-spacing);
   /*height: 36px;*/
-  background-color: $theme-surface;
-  color: $theme-on-primary;
+  background-color: var(--theme-surface);
+  color: var(--theme-on-primary);
   border-radius: $border-radius-4;
   border-style: none;
   text-transform: uppercase;
@@ -51,57 +51,57 @@
       PRIMARY BUTTONS
   ----------------------------------------------------- */
 .btn-primary {
-  background-color: $theme-primary;
-  color: $theme-on-primary-inverse;
+  background-color: var(--theme-primary);
+  color: var(--theme-on-primary-inverse);
   border: none !important;
 
   &:hover {
-    background-color: $theme-primary-hover;
-    color: $theme-on-primary-inverse;
+    background-color: var(--theme-primary-hover);
+    color: var(--theme-on-primary-inverse);
   }
 
   &:focus,
   &:active {
-    background-color: $theme-primary-active !important;
-    color: $theme-on-primary-inverse !important;
+    background-color: var(--theme-primary-active) !important;
+    color: var(--theme-on-primary-inverse) !important;
   }
 }
 
 .btn-secondary {
-  background-color: $theme-secondary;
-  color: $theme-on-primary;
+  background-color: var(--theme-secondary);
+  color: var(--theme-on-primary);
   border: none !important;
 
   &:hover {
-    background-color: $theme-secondary-hover;
-    color: $theme-on-primary;
+    background-color: var(--theme-secondary-hover);
+    color: var(--theme-on-primary);
   }
 
   &:focus,
   &:active {
-    background-color: $theme-secondary-active !important;
-    color: $theme-on-primary !important;
+    background-color: var(--theme-secondary-active) !important;
+    color: var(--theme-on-primary) !important;
   }
 }
 
 .btn-link { 
-  background-color: $theme-background;
-  color: $theme-primary;
+  background-color: var(--theme-background);
+  color: var(--theme-primary);
   border: none !important;
   box-shadow: $shadow-0dp;
  
 
   &:hover {
-    background-color: $theme-light-primary;
-    color: $theme-primary-hover;
+    background-color: var(--theme-light-primary);
+    color: var(--theme-primary-hover);
     box-shadow: $shadow-0dp;
     text-decoration: none;
   }
 
   &:focus,
   &:active {
-    background-color: $theme-light-primary-hover !important;
-    color: $theme-primary-active!important;
+    background-color: var(--theme-light-primary-hover) !important;
+    color: var(--theme-primary-active) !important;
     box-shadow: $shadow-0dp !important;
     text-decoration: none;
   }
